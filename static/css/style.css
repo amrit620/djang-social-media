@@ -1,0 +1,19 @@
+.nav-link {
+    color: white !important;
+    
+    font-weight: 400;
+}
+
+
+.nav-link:focus {
+    color: rgb(192, 165, 161) !important;
+}
+
+.upload {
+    border: 2px solid green !important;
+    padding: 50px;
+    margin: 20px 0 0 50px;
+    height: 100px !important;
+}
+
+
