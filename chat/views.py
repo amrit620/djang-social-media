@@ -47,10 +47,8 @@ def logoutUser(request):
 
 @login_required(login_url='login')
 def home(request):
-    lpost = Post.objects.all()
-    mpost = list(lpost)
-    for post in mpost:
-        print(type(post))
+    post = Post.objects.all()
+    
     
     context = {'post':post,}
     return render(request,'home.html',context)
@@ -74,11 +72,3 @@ def createPost(request):
     return render(request,'create.html',context)
 
 
-post = Post.objects.all()
-
-lpost = Post.objects.all()
-mpost = list(lpost)
-uid = lpost.values_list('id',flat=True)
-for post in mpost:
-    for i in uid:
-        print(type(post),i)
